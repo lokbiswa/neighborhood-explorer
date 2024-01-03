@@ -102,10 +102,8 @@ const Map = () => {
           layers: ['tracks', 'neighborhoods'],
         });
         const properties = point[0]?.properties ? point[0]?.properties : null;
-        console.log(point);
 
         if (properties) {
-          console.log(selectedNeighborhoodRef.current);
           if (selectedNeighborhoodRef.current) {
             setClickStatus(selectedNeighborhoodRef.current, false);
           }

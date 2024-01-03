@@ -1,8 +1,9 @@
 const style = {
-  fontSize: '2rem',
+  fontSize: '1.5rem',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  height: '90vh',
 };
 
 const Loading = () => {

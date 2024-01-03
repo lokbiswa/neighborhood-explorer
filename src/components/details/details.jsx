@@ -16,7 +16,7 @@ const Details = () => {
     }
     return data;
   }, {});
-  console.log(areaData);
+
   return (
     <div className="detail-container">
       <div className="state-name detail">
