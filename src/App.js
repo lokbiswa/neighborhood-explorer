@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Loading from './components/loading/loading';
+import Map from './components/map/map';
+import Details from './components/details/details';
+import Barchart from './components/barchart/barchart';
+import { useStoreContext } from './app-store/app-store';
 function App() {
-  return (
+  const { state } = useStoreContext();
+  return state.dataLoading ? (
+    <Loading />
+  ) : (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Details />
+      <Map></Map>
+      <Barchart />
     </div>
   );
 }
